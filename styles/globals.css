@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #25ae88;
+  --secondary: #ebba16;
+  --accent: #054a84;
+}
+
+.badge {
+  clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 0 0, 0 0);
+  border-bottom: 2px solid #ebba16;
+}

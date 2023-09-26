@@ -3,11 +3,11 @@ import React from 'react';
 
 
 const AmpStyle = ({ children }: any) => {
-    return (
-        <div>
-            <Head>
-                <style amp-custom>
-                    {`
+  return (
+    <div>
+      <Head>
+        <style amp-custom>
+          {`
                 
 /*
 */
@@ -551,42 +551,6 @@ video {
   width: 100%;
 }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 576px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 992px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
 .absolute {
   position: absolute;
 }
@@ -710,6 +674,10 @@ video {
   border-bottom-width: 4px;
 }
 
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
 .border-secondary {
   --tw-border-opacity: 1;
   border-color: rgb(235 186 22 / var(--tw-border-opacity));
@@ -718,6 +686,20 @@ video {
 .border-slate-400 {
   --tw-border-opacity: 1;
   border-color: rgb(148 163 184 / var(--tw-border-opacity));
+}
+
+.secondary {
+  color: rgb(235 186 22 / var(--tw-border-opacity));
+}
+
+.bg-secondary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 186 22 / var(--tw-border-opacity));
+}
+
+
+.primary {
+  color: rgb(37 174 136 / var(--tw-bg-opacity));
 }
 
 .bg-primary {
@@ -782,6 +764,10 @@ video {
   font-weight: 600;
 }
 
+.bg-accent {
+  background-color: rgb(5 74 132 / var(--tw-text-opacity));
+}
+
 .text-accent {
   --tw-text-opacity: 1;
   color: rgb(5 74 132 / var(--tw-text-opacity));
@@ -819,40 +805,66 @@ video {
   -webkit-line-clamp: 3;
 }
 
-@media (min-width: 768px) {
-  .md\:absolute {
-    position: absolute;
-  }
+.badge {
+  clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 0 0, 0 0);
+  border-bottom: 2px solid #ebba16;
+}
 
-  .md\:flex {
-    display: flex;
-  }
+.header{
+  height: 66px;
+  padding: 10px;
+  justify-content: space-between; /* Center the 'logo' and push 'left-align' to the left */
+  align-items: center;
 
-  .md\:flex-row {
-    flex-direction: row;
-  }
-
-  .md\:gap-1 {
-    gap: 0.25rem;
-  }
-
-  .md\:gap-6 {
-    gap: 1.5rem;
+  .logo{
+    height: 50px;
+    width: 180px;
+    margin: 0 auto;
   }
 }
 
-@media (min-width: 992px) {
-  .lg\:flex {
-    display: flex;
+.content{
+  margin-top: 10px;
+  border-radius:5px;
+  .main{
+    .background{
+      position:relative;
+      .cover-image{
+        height: 100px;
+        position:absolute;
+        background-position: 50%!important;
+        background-size: cover!important;
+        width: 100%;
+        opacity: .6;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        .i-amphtml-replaced-content{
+          object-fit: cover;
+        }
+      }
+      .very-active{
+        position:absolute;
+        right:0;
+        top:0;
+        padding: 2px 10px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+    }
+    .profile-title{
+      
+    }
   }
-}`}
-                </style>
-            </Head>
-            <div>
-                {children}
-            </div>
-        </div>
-    );
+}
+
+`}
+        </style>
+      </Head>
+      <div>
+        {children}
+      </div>
+    </div>
+  );
 };
 
 export default AmpStyle;
